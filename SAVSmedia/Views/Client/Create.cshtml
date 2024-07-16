@@ -1,0 +1,48 @@
+﻿@model ClientAddViewModel
+
+@{
+    ViewBag.Title = "Client form";
+}
+
+<form asp-controller="client" asp-action="create" method="post" class="mt-3">
+    <div class="form-group row">
+        <label asp-for="name" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="name" class="form-control" placeholder="Name" />
+            <span asp-validation-for="name"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="companyName" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="companyName" class="form-control" placeholder="Email" />
+            <span asp-validation-for="companyName"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="emailId" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="emailId" class="form-control" placeholder="Email" />
+            <span asp-validation-for="emailId"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="contactNumber" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="contactNumber" class="form-control" placeholder="Email" />
+            <span asp-validation-for="contactNumber"></span>
+        </div>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger">
+
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Create</button>
+        </div>
+    </div>
+</form>

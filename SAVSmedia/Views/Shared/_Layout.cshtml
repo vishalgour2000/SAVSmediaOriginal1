@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+        <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <script src="~/lib/jquery/jquery.js"></script>
+        <script src="~/lib/jquery-validate/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <link href="~/css/Site.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm bg-light navbar-light">
+            <a class="navbar-brand" asp-action="index" asp-controller="home">
+                <h3>SAVSMedia</h3>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="index" asp-controller="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="create" asp-controller="home">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="create" asp-controller="home">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-action="create" asp-controller="home">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            @RenderBody()
+        </div>
+        @if (IsSectionDefined("Scripts"))
+        {@RenderSection("Scripts", required: true)
+    }
+    </div>
+</body>
+</html>
